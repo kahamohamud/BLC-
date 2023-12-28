@@ -1,0 +1,27 @@
+.fixed-size-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .fixed-size-table th,
+  .fixed-size-table td {
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .fixed-size-table th {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  .fixed-size-table a {
+    color: #333;
+  }
+  
+  .fixed-size-table a:hover {
+    text-decoration: underline;
+  }

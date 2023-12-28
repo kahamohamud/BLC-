@@ -1,0 +1,125 @@
+
+    /* Style the menu container */        
+    @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    .menu-container {
+        position: fixed;
+        top: 0;
+        left: -300px; /* Start with the menu hidden and wider */
+        width: 300px; /* Adjust the width */
+        height: 100%;
+        background-color: #1d1d1d;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        z-index: -3;
+        animation: slideInFromLeft 0.5s ease-in-out;
+        overflow-y: auto;
+      }
+  
+      /* Style the menu list items */
+      .menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Add this line */
+      }
+  
+      .menu-list li {
+        padding: 0.8rem 0;
+        text-align: center;
+        border-bottom: 1px solid #3d3d3d;
+      }
+  
+      .menu-list li:last-child {
+        border-bottom: none;
+      }
+  
+      .menu-list a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        margin-left: 10px; /* Adjust the left margin to push icons and text to the right */
+      }
+  
+      .menu-list i {
+        margin-right: 0.5rem; /* Adjusted the margin */
+      }
+  
+      /* Style the hidden checkbox input */
+      #menu-toggle {
+        display: none;
+      }
+  
+      /* Style the label for the hidden checkbox input */
+      label[for="menu-toggle"] {
+        cursor: pointer;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+      }
+  
+      /* Style the logo image */
+      #logo {
+        height: 4rem;
+        width: auto;
+      }
+  
+      /* When the checkbox is checked, show the menu */
+      #menu-toggle:checked ~ .menu-container {
+        left: 0;
+      }
+  
+      /* Move header elements when the menu is open */
+      #menu-toggle:checked ~ .menu-container ~ .overlay {
+        transform: translateX(250px); /* Adjust the value to your menu width */
+      }
+  
+      #menu-toggle:checked ~ .menu-container ~ h1 {
+        transform: translateX(250px); /* Adjust the value to your menu width */
+      }
+  
+      #menu-toggle:checked ~ .menu-container ~ .button-container {
+        transform: translateX(250px); /* Adjust the value to your menu width */
+      }
+      .dropdown.show-dropdown .dropdown-content {
+        opacity: 1;
+        max-height: 500px; /* Set a maximum height for smooth animation */
+        transition: opacity 0.3s ease, max-height 0.3s ease; /* Add max-height transition */
+        overflow: hidden;
+      }
+      
+      /* Hide dropdown content by default */
+      .dropdown.show-dropdown .dropdown-content {
+        opacity: 1;
+        max-height: 500px; /* Set a maximum height for smooth animation */
+        transition: opacity 0.8s ease, max-height 0.5s ease; /* Adjust transition duration */
+        overflow: hidden;
+      }
+      
+      /* Hide dropdown content by default */
+      .dropdown-content {
+        display: block;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.8s ease, max-height 0.5s ease; /* Adjust transition duration */
+      }
+    .dropdown a i.fas.fa-angle-down {
+  margin-left: 7px; /* Adjust the margin to create a smaller space */
+}

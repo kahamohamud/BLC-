@@ -1,0 +1,246 @@
+/* table style */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+body{
+  background-image: url('3.jpg');
+  background-repeat: repeat-y;
+  background-repeat: repeat-x;
+}
+
+.filter  {
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden; /* Change to hidden to prevent horizontal scrolling */
+  margin-top: 15px;
+  position: relative; /* Needed for positioning the fixed header */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e94ca1",endColorstr="#c74ae9",GradientType=1);
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 2px 15px rgba(64,64,64,.7);
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #bf0000; /* Add your header background color */
+  color: #fafafa;
+  z-index: 1; /* Ensure the header is above the tbody while scrolling */
+}
+
+th {
+  background-color: #bf0000;
+  color: #fafafa;
+  font-family: 'Open Sans',Sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  opacity: .7;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+tr{
+  width: 100%;
+  background-color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+}
+.filter::-webkit-scrollbar {
+  width: 10px; /* Set the width of the vertical scrollbar */
+  height: 10px; /* Set the height of the horizontal scrollbar */
+  background-color: #f0f0f0;
+}
+
+.filter::-webkit-scrollbar-thumb {
+  background-color: #bf000093;
+  border-radius: 5px;
+}
+
+.filter::-webkit-scrollbar-thumb:hover {
+  background-color: #bf000093;
+}
+
+.filter::-webkit-scrollbar-button:start:decrement,
+.filter::-webkit-scrollbar-button:end:increment {
+  display: block;
+  background-color: #f0f0f0;
+}
+
+.filter::-webkit-scrollbar-button:start:decrement {
+  background-image: url('path_to_up_arrow_icon.png');
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter::-webkit-scrollbar-button:end:increment {
+  background-image: url('path_to_down_arrow_icon.png');
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter::-webkit-scrollbar-button:horizontal:start:decrement {
+  background-image: url('path_to_left_arrow_icon.png');
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter::-webkit-scrollbar-button:horizontal:end:increment {
+  background-image: url('path_to_right_arrow_icon.png');
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter::-webkit-scrollbar-button:hover {
+  background-color: #d0d0d0;
+}
+
+.button-7 {
+  text-decoration: none;
+  color: rgb(224, 224, 8);
+  font-weight: 600;
+}
+
+.button-8 {
+  text-decoration: none;
+  color: red;
+  font-weight: 600;
+}
+.button-1 {
+  text-decoration: none;
+  color: green;
+  font-weight: 600;
+}
+.button-10 {
+  text-decoration: none;
+  color: rgb(30, 99, 13);
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+}
+.search-container {
+  margin-top: 16rem;
+  margin-left: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.searchinput-field
+{
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 20px;
+  border-top: 1px solid rgb(15, 15, 15);
+  border-bottom: 1px solid rgb(15, 15, 15);
+  outline:none;
+  background: transparent;
+  width: 25%;
+  height: 30%;
+  text-align: center;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.search-btn
+{
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #2d2691;
+  border-left:0;
+  border-top:0;
+  border-right:0;
+  border-bottom:0 ;
+  outline: none;
+  color: white;
+  border: 1px solid transparent;
+  display: inline-flex;
+	font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  text-decoration: none;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+  border-radius: .85rem;
+}  
+.search-btn:hover,
+  .button-7:focus {
+	background-color: #c91010;
+	color: #ffffff;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+
+  }
+  .search-btn:active {
+	background-color: #c85000;
+	box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+	transform: translateY(0);
+  }
+  .class-select-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -50px;
+    margin-right: 20px;
+  }
+  .button-9 {
+    /* your existing button styles */
+    /* update styles for select element */
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;      border: 1px solid transparent;
+    border-radius: .65rem;
+    background-color: #0c7225;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    -webkit-user-select: none;
+    text-decoration: none;
+  }
+  
+  .button-9:hover{
+    background-color: #0c7225d0;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px; */
+  }
+  .button-1 {
+    text-decoration: none;
+    color: green;
+    font-weight: 600;
+  }
+  .button-9 {
+    /* your existing button styles */
+    z-index: 1;
+  }
+  a{
+    text-decoration: none;
+  }
+
+
